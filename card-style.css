@@ -1,0 +1,192 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.visiting-card {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-main {
+    display: flex;
+    padding: 30px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+}
+
+.photo-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    margin-right: 30px;
+    flex-shrink: 0;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.profession {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.card-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 30px;
+}
+
+.details-section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #4a4a4a;
+    display: flex;
+    align-items: center;
+}
+
+h2 i {
+    margin-right: 10px;
+    color: #6e8efb;
+}
+
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.skills-list li:last-child {
+    border-bottom: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    color: #6e8efb;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #6e8efb;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .card-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .photo-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .contacts {
+        align-items: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-details {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .profession {
+        font-size: 1rem;
+    }
+}
